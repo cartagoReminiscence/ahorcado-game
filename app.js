@@ -19,7 +19,33 @@ To do:
 
 */
 
-let palabra = "INNATO";
+// let palabra = "***********";
+// let palabra = "***";
+let palabra = "INNATO"
+
+// Genera la misma cantidad de caracteres del string "palabra" con "_" caracteres
+const guionBajoPalabraDesc = () => {
+    let divPalabraDesc = document.querySelector('#palabra-desconocida');//etiqueta div id="palabra-desconocida"
+    // Agregar "_" caracteres a div id="palabra-desconocida"
+    let len = palabra.length;
+    for(let i = 0; i < len; i++){
+        let spanLetraDesc = document.createElement('span');//etiqueta span id="letra-desconocida"
+        spanLetraDesc.id = 'letra-desconocida';
+        spanLetraDesc.innerText = '__';
+
+        divPalabraDesc.innerHTML += ' ';//espacio entre "spanLetraDesc" elementos
+        divPalabraDesc.append( spanLetraDesc );// Agregar a "divPalabraDesc"
+    }
+};
+
+// Limpia la pantalla de "_" caracteres
+const limpiarPalabraDesc = () => {
+    let divPalabraDesc = document.querySelector('#palabra-desconocida');
+    while( divPalabraDesc.childElementCount != 0 ){
+        let firstDivPalabraDesc = divPalabraDesc.firstElementChild;
+        divPalabraDesc.removeChild( firstDivPalabraDesc );
+    }
+};
 
 function validacion(palabra, caracter){
     let tam = palabra.length;//tamaño de la palabra
@@ -102,6 +128,10 @@ if( picture.childElementCount != 0 ){
 
 let picture = document.querySelector('picture');
 const iniciar = () => {
+    limpiarPalabraDesc();//limpia la pantalla de "_" caracteres
+    guionBajoPalabraDesc();// añade "_" caracteres 
+    // console.log({ len_palabra: palabra.length });//corroboración del tamaño de "palabra-desconocida"
+
     totalFallas = 6;
     totalCoincidencias = 0;
     uniendoPalabra = [];
