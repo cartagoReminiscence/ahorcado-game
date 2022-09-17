@@ -19,9 +19,10 @@ To do:
 
 */
 
-// let palabra = "***********";
+let palabra = "***********";
+let textoPista = "soy un asterisco"
 // let palabra = "***";
-let palabra = "INNATO"
+// let palabra = "INNATO"
 
 // Genera la misma cantidad de caracteres del string "palabra" con "_" caracteres
 const guionBajoPalabraDesc = () => {
@@ -119,9 +120,22 @@ const ingresar = () => {
     
 };
 
-let btnPedirPista = document.querySelector('#pedir-pista');
+/*  Pedir Pista  */
+let divPedirPista = document.querySelector('#div-pedir-pista');//variable referencia a etiqueta 'div' id="div-pedir-pista"
+let btnPedirPista = document.querySelector('#pedir-pista');//referencia a 'button' id="pedir-pista"
 const pedirPista = () => {
     btnPedirPista.disabled = true;
+    //Creacion de la etiqueta 'p' id="pista"
+    let pista = document.createElement('p');
+    pista.id = 'pista';
+    pista.innerText = textoPista;
+    //Agregar "pista" al DOM
+    divPedirPista.append(pista);
+};
+
+const limpiarPista = () => {//Eliminar hijo, si es una pista
+    let lastChildPedirPista = divPedirPista.lastElementChild;
+    if( lastChildPedirPista.id === 'pista' ) divPedirPista.removeChild( lastChildPedirPista );
 };
         
 /* Reiniciar el juego */
@@ -139,6 +153,7 @@ const iniciar = () => {
     limpiarPalabraDesc();//limpia la pantalla de "_" caracteres
     guionBajoPalabraDesc();// añade "_" caracteres 
     // console.log({ len_palabra: palabra.length });//corroboración del tamaño de "palabra-desconocida"
+    limpiarPista();//limpia en pantalla la pista de la partida anterior
 
     btnPedirPista.disabled = false;//habilitar boton al inicio del juego
 

@@ -27,13 +27,19 @@ h1 {
     width: 12em;
 }
 
+/* re-dimensionar las imagenes */
+#dibujo-ahorcado img {
+    width: 180px;
+    height: auto;
+}
+
 /* input de jugador */
 /* etiqueta div */
 #entrada-jugador {
     margin: auto;
     /* padding-left: 1em;
     padding-right: 1em; */
-    width: 19em;
+    width: 20em;
 }
 
 /* etiqueta input */
@@ -49,16 +55,26 @@ h1 {
     display: block;
 }
 
-#ingresar {
-    /* margin-left: 4em; */
+/* #ingresar {
+    margin-left: 4em;
     width: 7em;
-}
+} */
 
-#btn-entrada-jugador{
-    display: block;
-    margin: 1em 3.8em;
-} 
-/* #pedir-pista {
+#ingresar {
     display: block;
     margin: 1em auto;
-} */
+}
+
+#div-pedir-pista {
+    display: flex;
+    justify-content: left;
+}
+
+#pedir-pista {
+    margin: 10px 0;
+}
+
+/* mensaje pista */
+#pista {
+    margin-left: 40px;
+}
