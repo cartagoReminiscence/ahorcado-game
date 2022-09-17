@@ -79,6 +79,7 @@ let uniendoPalabra = [];
 // 
 let btnIngresar = document.querySelector('#ingresar');
 const ingresar = () => {
+    //
     let letra = input.value;
     
     // console.log({ valor_input: input.value });
@@ -102,6 +103,7 @@ const ingresar = () => {
     /*  Determina si Ganaste o perdiste el juego   */
     if( totalFallas === 0 ){
         btnIngresar.disabled = true;
+        btnPedirPista.disabled = true;
         console.log("===================");
         console.log("PERDISTE!!!!!");
         console.log("===================");
@@ -109,11 +111,17 @@ const ingresar = () => {
 
     if( totalCoincidencias === palabra.length ){
         btnIngresar.disabled = true;
+        btnPedirPista.disabled = true;
         console.log("===================");
         console.log("GANASTEEEE!!!!!");
         console.log("===================");
     }
     
+};
+
+let btnPedirPista = document.querySelector('#pedir-pista');
+const pedirPista = () => {
+    btnPedirPista.disabled = true;
 };
         
 /* Reiniciar el juego */
@@ -131,6 +139,10 @@ const iniciar = () => {
     limpiarPalabraDesc();//limpia la pantalla de "_" caracteres
     guionBajoPalabraDesc();// añade "_" caracteres 
     // console.log({ len_palabra: palabra.length });//corroboración del tamaño de "palabra-desconocida"
+
+    btnPedirPista.disabled = false;//habilitar boton al inicio del juego
+
+    input.value = '';//limpia caja de entra
 
     totalFallas = 6;
     totalCoincidencias = 0;
