@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Juego del Ahorcado</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>El Juego del Ahorcado</h1>
+    
+    <!-- colocar las palabras que acierta el jugador -->
+    <div id="adivina-palabra"></div>
+
+    <div>
+        <picture id="dibujo-ahorcado">
+        </picture>
+    </div>
+    <br>
+
+    <button onclick="iniciar()">Iniciar Juego</button>
+    <br>
+    <br>
+
+    <label for="letra">Ingresa una letra del abecedario: </label>
+    <input type="text" name="letra" id="letra" placeholder="por ejm: a, b o z" />
+    <button onclick="ingresar()" id="ingresar">Ingresa</button>
+
+
+    <script src="./app.js"></script> 
+</body>
+</html>
