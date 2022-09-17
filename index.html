@@ -30,9 +30,12 @@
     <!-- anidamiento de las etiquetas 'label', 'br', 'input' y 'button' -->
     <div id="entrada-jugador">
         <label for="letra">Ingresa una letra del abecedario: </label>
-        <br>
-        <input type="text" name="letra" id="letra" placeholder="por ejm: a, b o z" />
-        <button onclick="ingresar()" id="ingresar">Ingresa</button>
+        <input type="text" name="letra" id="letra" placeholder="ejm: a, B o z" maxlength="1" size="5" />
+        
+        <div id="btn-entrada-jugador">
+            <button onclick="ingresar()" id="ingresar">Ingresa</button>
+            <button onclick="pedirPista()" id="pedir-pista">Pedir pista!</button>
+        </div>
     </div>
 
     <script src="./app.js"></script> 

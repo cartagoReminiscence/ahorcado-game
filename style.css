@@ -1,5 +1,4 @@
 body {
-    /* padding: auto; */
     margin: auto;
     width: 50%;
 }
@@ -11,7 +10,7 @@ h1 {
 /* Palabra desconocida: oculta por caracteres "_" */
 #palabra-desconocida {
     /* margin: auto; */
-    padding: 20px;
+    padding: 23px;
     width: 100%;
     text-align: center;
     /* padding: auto; */
@@ -29,9 +28,17 @@ h1 {
 }
 
 /* input de jugador */
+/* etiqueta div */
 #entrada-jugador {
     margin: auto;
+    /* padding-left: 1em;
+    padding-right: 1em; */
     width: 19em;
+}
+
+/* etiqueta input */
+#letra {
+    text-align: center;
 }
 
 /* Botones */
@@ -45,3 +52,12 @@ h1 {
 #ingresar {
     width: 7em;
 }
+
+#btn-entrada-jugador{
+    display: block;
+    margin: 1em auto;
+} 
+/* #pedir-pista {
+    display: block;
+    margin: 1em auto;
+} */
