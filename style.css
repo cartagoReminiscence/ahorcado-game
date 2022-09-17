@@ -50,12 +50,13 @@ h1 {
 }
 
 #ingresar {
+    /* margin-left: 4em; */
     width: 7em;
 }
 
 #btn-entrada-jugador{
     display: block;
-    margin: 1em auto;
+    margin: 1em 3.8em;
 } 
 /* #pedir-pista {
     display: block;
