@@ -4,14 +4,16 @@ body {
     width: 50%;
 }
 
-h1, div[id="palabra-desconocida"] p {
+h1 {
     text-align: center;
 }
 
 /* Palabra desconocida: oculta por caracteres "_" */
 #palabra-desconocida {
-    margin: auto;
-    width: 50%;
+    /* margin: auto; */
+    padding: 20px;
+    width: 100%;
+    text-align: center;
     /* padding: auto; */
 }
 
@@ -24,6 +26,12 @@ h1, div[id="palabra-desconocida"] p {
     display: block;
     margin: auto;
     width: 12em;
+}
+
+/* input de jugador */
+#entrada-jugador {
+    margin: auto;
+    width: 19em;
 }
 
 /* Botones */
