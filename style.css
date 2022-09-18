@@ -1,6 +1,16 @@
 body {
+
     margin: auto;
     width: 50%;
+
+
+/* 
+    margin-left:auto;
+    margin-right:auto;
+    width:80%;
+    display: flex;
+    flex-direction: column;
+ */
 }
 
 h1 {
@@ -9,11 +19,9 @@ h1 {
 
 /* Palabra desconocida: oculta por caracteres "_" */
 #palabra-desconocida {
-    /* margin: auto; */
     padding: 23px;
     width: 100%;
     text-align: center;
-    /* padding: auto; */
 }
 
 #letra-desconocida {
@@ -36,14 +44,53 @@ h1 {
 /* input de jugador */
 /* etiqueta div */
 #entrada-jugador {
-    margin: auto;
-    /* padding-left: 1em;
-    padding-right: 1em; */
-    width: 20em;
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* margin: auto; */
+    /* width: 15em; */
+    height: 50px;
+    width: 270px;
+}
+
+/* caja de texto, input y boton para "entrada-jugador" */
+#btn-entrada-jugador {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    /*
+    flex-direction: row;
+    justify-content: center; */
+}
+
+/* caja que encierra a "label" id="text-inpu-abc" */
+#caja-ingresar {
+    width: 50%;
+    /* margin: auto;
+    padding: 0;
+    width: 73px; */
+}
+
+#text-input-abc {
+    width: 80px;
+}
+
+/*  */
+#caja-input-button {
+    display: flex;
+    justify-content: space-evenly;
+    width: 64%;
+
 }
 
 /* etiqueta input */
 #letra {
+    /* margin: 1em 0.3em 1em 0.7em; */
+    margin: 0px;
+    padding: 0;
+    /* width: ; */
+    height: 30px;
     text-align: center;
 }
 
@@ -55,26 +102,36 @@ h1 {
     display: block;
 }
 
-/* #ingresar {
-    margin-left: 4em;
-    width: 7em;
-} */
-
 #ingresar {
     display: block;
-    margin: 1em auto;
+    /* margin: 1em auto; */
+    margin: 0;
+    padding: 0px;
+    height: 30px;
+    width: 52px;
 }
 
+/* caja envuele a boton "pedir-pista */
 #div-pedir-pista {
+/* 
+    display: flex;
+    justify-content: center; */
+
+    width: 100%;
+    height: 40px;
     display: flex;
     justify-content: left;
 }
 
 #pedir-pista {
-    margin: 10px 0;
+    /* margin: 10px 0; */
+    /* width: 100%; */
+
 }
 
 /* mensaje pista */
 #pista {
-    margin-left: 40px;
+    /* margin-left: 40px; */
+    width: 50%;
+    height: 100%;
 }

@@ -31,10 +31,14 @@
     <div id="entrada-jugador">
         <!-- Aún por mejorar el posicionamiento de los botones -->
         <div id="btn-entrada-jugador">
-            <label for="letra">Ingresa una letra del abecedario: </label>
-            <input type="text" name="letra" id="letra" placeholder="ejm: a, B o z" maxlength="1" size="5" />
-            <br>
-            <button onclick="ingresar()" id="ingresar">Ingresa</button>
+            <div id="caja-ingresar">
+                <label for="letra" id="text-input-abc">Ingresa una letra del abecedario: </label>
+            </div>
+
+            <div id="caja-input-button">
+                <input type="text" name="letra" id="letra" placeholder="ejm: a, B o z" maxlength="1" size="5" />
+                <button onclick="ingresar()" id="ingresar">Ingresa</button>
+            </div>
         </div>
 
         <div id="div-pedir-pista">
