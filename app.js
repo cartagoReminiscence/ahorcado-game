@@ -83,11 +83,6 @@ const limpiarPalabraDesc = () => {
         divPalabraDesc.removeChild( firstDivPalabraDesc );
 };
 
-// Reemplazar "_" por palabras encontradas
-let agregarCaracteresASetLetraDesc = (arreglo) => {
-    let parrafoSetLetraDesconocida = document.querySelector('p');//etiqueta p id="set-letra-desconocida"
-};
-
 /*              */ 
 function validacion(palabra, caracter){
     let tam = palabra.length;//tamaño de la palabra
@@ -108,6 +103,35 @@ let num = 2;
 const contadorImgSet = num => {
     if( num === 7 ) return 1;
     return num + 1;
+};
+
+/*    Aviso en pantalla del estado del juego      */
+let mensajeEstadoDelJuego = () => {
+    let estadoDeJuego = document.querySelector('.vives-o-mueres');
+
+    switch(num){
+        case 1:
+            estadoDeJuego.innerText = "R.I.P";
+            break;
+        case 2:
+            estadoDeJuego.innerText = "Hoy no tengo pensado morir ahorcado!";
+            break;
+        case 3:
+            estadoDeJuego.innerText = "No pasa nada. Aún estoy con vida";
+            break;
+        case 4:
+            estadoDeJuego.innerText = "Aguantaré un poco más, confío en ti :(";
+            break;
+        case 5:
+            estadoDeJuego.innerText = "Acierta, por favor!!";
+            break;
+        case 6:
+            estadoDeJuego.innerText = "Me está faltando el aire, auxil...";
+            break;
+        case 7:
+            estadoDeJuego.innerText = "** sonidos de asfixia **";
+            break;
+    }
 };
 
 /*     funcion reconocer posiociones      */
@@ -149,10 +173,11 @@ const ingresar = () => {
         for(let cont = 0; cont < coincidencias; cont++){
             uniendoPalabra.push(letra);
         }
+        // ACIERTOS
         reconocerPos(letra);
         mostrarEnSetLetraDesc();
     }
-    else{
+    else{//FALLAS
         cambiarImg();
         totalFallas -= 1;
     }
@@ -170,8 +195,10 @@ const ingresar = () => {
         
         let divPalabraDesc = document.querySelector('#palabra-desconocida');//etiqueta div id="palabra-desconocida"
         divPalabraDesc.append( parrafoPerdiste );
-    }
 
+        num = contadorImgSet(num);
+    }
+    
     if( totalCoincidencias === palabra.length ){
         btnIngresar.disabled = true;
         btnPedirPista.disabled = true;
@@ -184,6 +211,11 @@ const ingresar = () => {
         
         let divPalabraDesc = document.querySelector('#palabra-desconocida');//etiqueta div id="palabra-desconocida"
         divPalabraDesc.append( parrafoPerdiste );
+        num = 2;
+
+        /* Limpia pantalla de estado de vida del jugador */
+        let estadoDeJuego = document.querySelector('.vives-o-mueres');
+        estadoDeJuego.innerText = '';
     }
 };
 
@@ -221,8 +253,9 @@ const iniciar = () => {
     [ palabra, textoPista ] = escogerPalabraYPista();//Asignar la palabra a adivinar y su pista respectiva
     limpiarPalabraDesc();//limpia la pantalla de "_" caracteres
     guionBajoPalabraDesc();// añade "_" caracteres 
-
+    
     limpiarPista();//limpia en pantalla la pista de la partida anterior
+    mensajeEstadoDelJuego();//aviso de estado de salud [by default ACIERTA]
 
     btnPedirPista.disabled = false;//habilitar boton al inicio del juego
 
@@ -241,6 +274,7 @@ const iniciar = () => {
 /* Cambiar el estado del juego */
 const cambiarImg = () => {
     num = contadorImgSet(num);
+    mensajeEstadoDelJuego();//FALLA
     //
     picture.removeChild(picture.firstElementChild);
 
