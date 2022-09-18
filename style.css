@@ -35,13 +35,13 @@ h1 {
 #aviso-salud-ahorcado {
     /* padding: 23px; */
     /* padding: auto; */
-    margin: 0;
+    margin: auto;
     width: 350px;
     height: 20px;
     text-align: center;
 }
 
-#casi-mueres {
+.vives-o-mueres {
     width: 100%;
     height: 100%;
 }
@@ -64,7 +64,7 @@ h1 {
 #entrada-jugador {
     /* display: flex; */
     /* flex-direction: column; */
-    /* margin: auto; */
+    margin: auto;
     /* width: 15em; */
     height: 50px;
     width: 270px;
@@ -138,14 +138,13 @@ h1 {
     width: 100%;
     height: 40px;
     display: flex;
-    justify-content: left;
+    justify-content: space-between;
 }
 
-#pedir-pista {
-    /* margin: 10px 0; */
-    /* width: 100%; */
-
-}
+/* #pedir-pista {
+    margin: 10px 0;
+    width: 100%;
+} */
 
 /* mensaje pista */
 #pista {
