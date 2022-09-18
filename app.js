@@ -7,22 +7,55 @@ Cómo presentar el trabajo final (según lo que va a considerar el profesor):
     - subir video en el trabajo final [duracion 30 segundas aprox]
 
 To do:
-    - Agregar un universo de palabras candidatas a ser adivinadas
-    - escoger aleatoriamente una palabra del array y asignar (este string) a la variable "palabra"
+    - Agregar un universo de palabras candidatas a ser adivinadas [check]
+    - escoger aleatoriamente una palabra del array y asignar (este string) a la variable "palabra" [check]
 
     - Mostrar en pantalla los acumuladores (usar metodo "document.querySelector") como por ejm:
     las variables "totalCoincidencias" convertir de "_ _ _ _ _ _" a "_ N N _ _ _", 
     "totalFallas" -> "Numero de intentos restantes", las pistas
 
-    - Agregar el boton "Pedir una pista"
+    - Agregar el boton "Pedir una pista" [check]
     - 
 
 */
 
-let palabra = "***********";
-let textoPista = "soy un asterisco"
-// let palabra = "***";
-// let palabra = "INNATO"
+/*  Escoger aleatoriamente palabra-textoPísta de un array  */
+//Array de pares de strings: palabra-textoPista
+let palabras = [
+    ['atlantico', 'Un océano'],
+    ['ordenador', 'Una máquina'],
+    ['laurel', 'Un árbol'],
+    ['plaza', 'Espacio público'],
+    ['rueda', 'Gran invento'],
+    ['cereza', 'Una fruta'],
+    ['petanca', 'Un juego'],
+    ['higuera', 'Un árbol'],
+    ['everest', 'Un monte'],
+    ['relampago', 'Antecede al trueno'],
+    ['jirafa', 'Un animal'],
+    ['luxemburgo', 'Un país'],
+    ['uruguay', 'Un país'],
+    ['ilustracion', 'Representación gráfica'],
+    ['excursion', 'Actividad en la naturaleza'],
+    ['empanadilla', 'De la panadería'],
+    ['pastel', 'De la pastelería'],
+    ['colegio', 'Lugar para estudiar'],
+    ['carrera', 'Competición'],
+    ['mermelada', 'Confitura'],
+];
+
+//Funcion retona el par de strings: palabra y pista
+let escogerPalabraYPista = () => {
+    //Generar un numero entero aleatorio en el rango de [0, len> (en nuestro caso len = 20, entonces [0, 20>)
+    let len = palabras.length;
+    let pos = Math.floor( Math.random() * len );//numero entero aleatorio de 0 a 19, pos: posicion
+
+    let [ palabra, textoPista ] = palabras[pos];//Escoger la palabra y su respectiva pista
+    palabra = palabra.toUpperCase();//convertir a mayúsculas
+    return [ palabra, textoPista ]
+};
+
+let [ palabra, textoPista ] = escogerPalabraYPista();//Asignar la palabra a adivinar y su pista respectiva
 
 // Genera la misma cantidad de caracteres del string "palabra" con "_" caracteres
 const guionBajoPalabraDesc = () => {
@@ -150,6 +183,7 @@ if( picture.childElementCount != 0 ){
 
 let picture = document.querySelector('picture');
 const iniciar = () => {
+    [ palabra, textoPista ] = escogerPalabraYPista();//Asignar la palabra a adivinar y su pista respectiva
     limpiarPalabraDesc();//limpia la pantalla de "_" caracteres
     guionBajoPalabraDesc();// añade "_" caracteres 
     // console.log({ len_palabra: palabra.length });//corroboración del tamaño de "palabra-desconocida"
