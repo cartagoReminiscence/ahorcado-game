@@ -1,25 +1,21 @@
 body {
-
     margin: auto;
-    width: 50%;
-
-
-/* 
-    margin-left:auto;
-    margin-right:auto;
-    width:80%;
-    display: flex;
-    flex-direction: column;
- */
+    width: 100%;
+    background-color: rgb(14, 102, 85);
+    color: aliceblue;
 }
 
 h1 {
+    height: 50px;
+    margin-top: -8px;
+    padding-top: 10px;
     text-align: center;
+    background-color: rgb(46, 64, 83);
+    color: white;
 }
 
 /* Palabra desconocida: oculta por caracteres "_" */
 #palabra-desconocida {
-    /* padding: 23px; */
     margin: auto;
     width: 350px;
     height: 20px;
@@ -33,8 +29,6 @@ h1 {
 }
 
 #aviso-salud-ahorcado {
-    /* padding: 23px; */
-    /* padding: auto; */
     margin: auto;
     width: 350px;
     height: 20px;
@@ -59,13 +53,14 @@ h1 {
     height: auto;
 }
 
+picture img {
+    filter: invert(var(--value, 80%))
+}
+
 /* input de jugador */
 /* etiqueta div */
 #entrada-jugador {
-    /* display: flex; */
-    /* flex-direction: column; */
     margin: auto;
-    /* width: 15em; */
     height: 50px;
     width: 270px;
 }
@@ -77,17 +72,11 @@ h1 {
     width: 100%;
     height: 100%;
     display: flex;
-    /*
-    flex-direction: row;
-    justify-content: center; */
 }
 
 /* caja que encierra a "label" id="text-inpu-abc" */
 #caja-ingresar {
     width: 50%;
-    /* margin: auto;
-    padding: 0;
-    width: 73px; */
 }
 
 #text-input-abc {
@@ -104,10 +93,8 @@ h1 {
 
 /* etiqueta input */
 #letra {
-    /* margin: 1em 0.3em 1em 0.7em; */
     margin: 0px;
     padding: 0;
-    /* width: ; */
     height: 30px;
     text-align: center;
 }
@@ -122,7 +109,6 @@ h1 {
 
 #ingresar {
     display: block;
-    /* margin: 1em auto; */
     margin: 0;
     padding: 0px;
     height: 30px;
@@ -131,24 +117,14 @@ h1 {
 
 /* caja envuele a boton "pedir-pista */
 #div-pedir-pista {
-/* 
-    display: flex;
-    justify-content: center; */
-
     width: 100%;
     height: 40px;
     display: flex;
     justify-content: space-between;
 }
 
-/* #pedir-pista {
-    margin: 10px 0;
-    width: 100%;
-} */
-
 /* mensaje pista */
 #pista {
-    /* margin-left: 40px; */
     width: 50%;
     height: 100%;
 }
