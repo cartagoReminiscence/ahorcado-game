@@ -19,13 +19,31 @@ h1 {
 
 /* Palabra desconocida: oculta por caracteres "_" */
 #palabra-desconocida {
-    padding: 23px;
-    width: 100%;
+    /* padding: 23px; */
+    margin: auto;
+    width: 350px;
+    height: 20px;
     text-align: center;
 }
 
-#letra-desconocida {
+.letra-desconocida {
+    width: 100%;
+    height: 100%;
     font-weight: bold;
+}
+
+#aviso-salud-ahorcado {
+    /* padding: 23px; */
+    /* padding: auto; */
+    margin: 0;
+    width: 350px;
+    height: 20px;
+    text-align: center;
+}
+
+#casi-mueres {
+    width: 100%;
+    height: 100%;
 }
 
 /* Imagen de ahorcado */
