@@ -1,23 +1,3 @@
-/*
-Cómo presentar el trabajo final (según lo que va a considerar el profesor):
-    - (ponerlo al final del trabajo) Conclusiones y recomendaciones de la propuesta final. [recomendaciones son en base a las conclusiones]
-[Es posible realizarlo en 5 clases? discutir y recomendaciones, crees que puede servir para evaluar en siguientes cursos?, feedback a la institucion, el curso, el proceso de aprendizaje]
-[se trata de evaluar todo el proceso de aprendizaje del presente curso]
-    - Los que expusieron: 
-    - subir video en el trabajo final [duracion 30 segundas aprox]
-
-To do:
-    - Agregar un universo de palabras candidatas a ser adivinadas [check]
-    - escoger aleatoriamente una palabra del array y asignar (este string) a la variable "palabra" [check]
-    - Agregar el boton "Pedir una pista" [check]
-    - Muestre en pantalla si perdí o gané [check]
-
-    - Mostrar en pantalla los acumuladores (usar metodo "document.querySelector") como por ejm:
-    las variables "totalCoincidencias" convertir de "_ _ _ _ _ _" a "_ N N _ _ _", 
-    "totalFallas" -> "Numero de intentos restantes", las pistas
-
-*/
-
 /*  Escoger aleatoriamente palabra-textoPísta de un array  */
 //Array de pares de strings: palabra-textoPista
 let palabras = [
@@ -43,7 +23,7 @@ let palabras = [
     ['mermelada', 'Confitura'],
 ];
 
-//Funcion retona el par de strings: palabra y pista
+//Funcion retorna el par de strings: palabra y pista
 let escogerPalabraYPista = () => {
     //Generar un numero entero aleatorio en el rango de [0, len> (en nuestro caso len = 20, entonces [0, 20>)
     let len = palabras.length;

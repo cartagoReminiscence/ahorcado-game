@@ -12,11 +12,11 @@
     
     <!-- colocar las palabras que acierta el jugador -->
     <div id="palabra-desconocida">
-        <!-- etiqueta provisional, para propósitos de prueba -->
-        <!-- <p id="set-letra-desconocida"><span id="letra-desconocida">__</span> <span id="letra-desconocida">__</span> <span id="letra-desconocida">__</span> <span id="letra-desconocida">__</span> <span id="letra-desconocida">__</span> <span id="letra-desconocida">__</span> <span id="letra-desconocida">__</span> <span id="letra-desconocida">__</span> <span id="letra-desconocida">__</span> <span id="letra-desconocida">__</span> <span id="letra-desconocida">__</span></p> -->
+        <!-- aquí se anidaran etiquetas del tipo 'p' id="set-letra-desconocida" -->
     </div>
 
     <div id="aviso-salud-ahorcado">
+        <!-- aquí se anidará el feedback para el jugador -->
         <p class="vives-o-mueres"></p>
     </div>
     <br>
@@ -33,7 +33,6 @@
 
     <!-- anidamiento de las etiquetas 'label', 'br', 'input' y 'button' -->
     <div id="entrada-jugador">
-        <!-- Aún por mejorar el posicionamiento de los botones -->
         <div id="btn-entrada-jugador">
             <div id="caja-ingresar">
                 <label for="letra" id="text-input-abc">Ingresa una letra del abecedario: </label>
@@ -47,7 +46,6 @@
 
         <div id="div-pedir-pista">
             <button onclick="pedirPista()" id="pedir-pista">Pedir pista!</button>
-            <!-- <p id="pista">soy un asterisco</p> -->
         </div>
 
     </div>
